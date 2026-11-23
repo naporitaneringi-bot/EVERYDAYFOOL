@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDITORIAL ROOM | EVERYDAY FOOL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>EVERYDAY FOOL.</h1>
+        <p>EDITORIAL ROOM</p>
+    </header>
+
+    <main class="admin-container">
+        <h2>NEW ARTICLE</h2>
+
+        <form id="article-form">
+            <input type="text" id="title" placeholder="記事タイトル" required>
+
+            <input type="text" id="description" placeholder="記事の説明">
+
+            <textarea id="content" placeholder="記事本文" rows="12" required></textarea>
+
+            <label for="image">カバー画像</label>
+            <input type="file" id="image" accept="image/*">
+
+            <button type="submit">PUBLISH ARTICLE</button>
+        </form>
+
+        <p id="message"></p>
+
+        <hr>
+
+        <h2>ARTICLES</h2>
+        <div id="admin-articles"></div>
+
+        <button id="logout-button">LOGOUT</button>
+        <p><a href="index.html">← BACK TO HOME</a></p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
